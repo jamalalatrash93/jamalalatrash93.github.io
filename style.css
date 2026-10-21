@@ -1,0 +1,5 @@
+:root{--bg:#111;--fg:#eee;--gold:#d4a73a}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.7 -apple-system,"Segoe UI",Tahoma,sans-serif}
+main{max-width:760px;margin:0 auto;padding:32px 16px}
+h1,h2{color:var(--gold)} a{color:var(--gold)} img{width:120px;border-radius:50%}
+nav a{margin-right:16px}
