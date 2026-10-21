@@ -1,0 +1,15 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Connected | How & Why</title><link rel="stylesheet" href="style.css"></head><body><main>
+<h1>TikTok login</h1>
+<p id="msg">Reading…</p>
+<p><input id="code" readonly style="width:100%;font-size:16px;padding:8px"></p>
+<p><button onclick="navigator.clipboard.writeText(document.getElementById('code').value)">Copy code</button></p>
+<script>
+const p = new URLSearchParams(location.search);
+const code = p.get("code"), err = p.get("error");
+document.getElementById("msg").textContent = code
+  ? "✅ Logged in. Copy this code and send it to the bot on Telegram: /tiktok <code>"
+  : "⚠️ " + (err || "No code in the link") + " " + (p.get("error_description") || "");
+document.getElementById("code").value = code || "";
+</script>
+</main></body></html>
